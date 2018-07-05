@@ -1,14 +1,14 @@
 <template>
 	<div class="">
 
-		<method-computed></method-computed>
-		<computed-watch></computed-watch>
+		<if-show></if-show>
+		<Key></Key>
 	</div>
 </template>
 
 <script>
-	import MethodComputed from '@/components/One/MethodComputed'
-	import ComputedWatch from '@/components/One/ComputedWatch'
+	import IfShow from '@/components/Two/IfShow'
+	import Key from '@/components/Two/Key'
 
 	export default {
 		data() {
@@ -20,8 +20,8 @@
 
 		},
 		components: {
-			MethodComputed,
-			ComputedWatch
+			IfShow,
+			Key
 		},
 		methods: {
 

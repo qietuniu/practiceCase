@@ -7,6 +7,21 @@
 					1、methods、computed和watch的区别？
 				</router-link>
 			</li>
+			<li>
+				<router-link to="/Two">
+					2、v-if、v-show的区别？
+				</router-link>
+			</li>
+			<li>
+				<router-link to="/Three">
+					3、父子组件如何通讯(传值)？
+				</router-link>
+			</li>
+			<li>
+				<router-link to="/Four">
+					4、vue的生命周期？
+				</router-link>
+			</li>
 		</ul>
 	</div>
 </template>
