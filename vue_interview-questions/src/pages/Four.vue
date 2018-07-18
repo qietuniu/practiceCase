@@ -2,12 +2,13 @@
 	<div class="item">
 		<div class="title">vue的生命周期？</div>
 		<p class="question">实例：查看控制台观测生命周期执行顺序。</p>
-		<div class="clearfix">
+		
+		
+		<div class="content clearfix">
+			<div class="clearfix">
 			<button @click="msg=!msg">启动update改变视图{{msg}}</button>
 			<button @click="destroy">销毁实例</button>
 		</div>
-		
-		<div class="content clearfix">
 			<img src="https://cn.vuejs.org/images/lifecycle.png"/>
 		</div>
 		<p class="reason">解析：<br/>父组件通过 prop(属性） 给子组件下发数据，子组件通过事件给父组件emit(发送)消息。
