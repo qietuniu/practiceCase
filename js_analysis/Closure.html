@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>闭包</title>
+		<script src="jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p>
+			闭包：能够访问到其他函数内部变量的函数。
+		</p>
+		<h3 id="one"></h3>
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			
+			
+			function f1(){
+				var n=999;
+				function f2(){
+					$("#one").text("第一种方式："+n);
+				}
+				return f2;
+			}
+			var result=f1();
+			result();
+		})
+	</script>
+</html>

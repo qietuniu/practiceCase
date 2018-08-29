@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>prototype</title>
+		<script src="jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<img src="http://images2015.cnblogs.com/blog/1010760/201609/1010760-20160907105250332-685440501.jpg"/>
+		<p>function Fn() {}// Fn为构造函数</p>
+		<p>var f1 = new Fn();//f1是Fn构造函数创建出来的对象</p>
+		<p>  构造函数的prototype属性值就是对象原型。（Fn.prototype就是对象的原型）?</p>
+		
+		
+		
+		<p>person1 和 person2 都是 构造函数 Person 的实例：<br/> 实例的构造函数属性（constructor）指向构造函数。
+		</p>
+		<p>每个对象都有 __proto__ 属性，但只有函数对象才有 prototype 属性</p>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			function Person(name, age, job) {
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayName = function() { alert(this.name) }
+			}
+			var person1 = new Person('Zaxlct', 28, 'Software Engineer');
+			var person2 = new Person('Mick', 23, 'Doctor');
+
+			console.log(person1.constructor == Person); //true
+			console.log(person2.constructor == Person); //true
+
+			function Persona() {}
+			Persona.prototype.name = 'Zaxlct';
+			Persona.prototype.age = 28;
+			Persona.prototype.job = 'Software Engineer';
+			Persona.prototype.sayName = function() {
+				console.log(this.name);
+			}
+
+			var person3 = new Persona();
+			person3.sayName(); // 'Zaxlct'
+
+			var person4 = new Persona();
+			person4.sayName(); // 'Zaxlct'
+
+			console.log(person4.sayName == person4.sayName); //true
+
+		})
+	</script>
+
+</html>

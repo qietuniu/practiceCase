@@ -5,6 +5,8 @@ import One from '@/pages/One'
 import Two from '@/pages/Two'
 import Three from '@/pages/Three'
 import Four from '@/pages/Four'
+import Home from '@/components/Five/Home'
+import Login from '@/components/Five/Login'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +36,16 @@ export default new Router({
       path: '/Four',
       name: 'Four',
       component: Four
+    },
+    {
+      path: '/Home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
     }
   ]
 })
